@@ -1,0 +1,21 @@
+body[theme="black"]{
+    background-color: black;
+}
+body[theme="black"] .section{
+    color: white;
+}
+body[theme="royalblue"]{
+    background-color: royalblue;
+}
+body[theme="salmon"]{
+    background-color: salmon;
+}
+
+body[theme="white"]{
+    background-color: whitesmoke;
+}
+
+@font-face {
+    font-family: "fonts";  
+    src: url("./sources/fonts.ttf") ;
+}
