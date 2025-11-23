@@ -7,12 +7,20 @@ body[theme="black"] .section{
 body[theme="royalblue"]{
     background-color: royalblue;
 }
+body[theme="royalblue"] .section{
+    color: rebeccapurple;
+}
 body[theme="salmon"]{
     background-color: salmon;
 }
-
+body[theme="salmon"] .section{
+    color: rgb(100, 89, 88);
+}
 body[theme="white"]{
     background-color: whitesmoke;
+}
+body[theme="white"]{
+    color: rgb(178, 70, 70);
 }
 
 @font-face {
