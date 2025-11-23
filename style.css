@@ -1,3 +1,17 @@
+:root{
+    --salmon : #EF9D71;
+    --black : #000;
+    --white : #fff;
+    --purple : royalblue;
+    --dsalmon : rgb(178, 70, 70);
+    --cyan : #AEDEE0;
+}
+
+
+*::selection{
+    background-color: var(--salmon);
+}
+
 body[theme="black"]{
     background-color: black;
 }
@@ -17,7 +31,7 @@ body[theme="salmon"] .section{
     color: rgb(100, 89, 88);
 }
 body[theme="white"]{
-    background-color: whitesmoke;
+    background-color: #AEDEE0;
 }
 body[theme="white"]{
     color: rgb(178, 70, 70);
