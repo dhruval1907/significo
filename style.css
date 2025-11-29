@@ -33,13 +33,13 @@ body[theme="salmon"]{
     background-color: salmon;
 }
 body[theme="salmon"] .section{
-    color: rgb(100, 89, 88);
+    color: rgb(250, 247, 247);
 }
 body[theme="white"]{
-    background-color: #AEDEE0;
+    background-color: #ffffff;
 }
 body[theme="white"]{
-    color: rgb(178, 70, 70);
+    color: rgb(0, 0, 0);
 }
 
 @font-face {
