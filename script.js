@@ -36,11 +36,7 @@ function homepage() {
     }, 'b')
 
 }
-homepage()
-marquee()
-
-
-function marquee() {
+function realpage() {
     gsap.to(".slides", {
         scrollTrigger: {
             trigger: ".real",
@@ -48,9 +44,25 @@ function marquee() {
             markers: true,
             start: "top top",
             bottom: "bottom top",
-            scrub: 1
+            scrub: 1    
         },
         xPercent : -200,
         ease:Power4,
     })
 }
+homepage()
+realpage()
+
+
+document.querySelectorAll(".listitem")
+
+    .forEach(function(el){
+        el.addEventListener("mousemove",function(dets){
+            gsap.to(this.querySelector(".picture",{
+                opacity : 1,
+
+            }))
+        })
+        el.addEventListener("mouseleave",function(dets){})
+    })
+
