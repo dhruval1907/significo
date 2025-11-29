@@ -5,7 +5,7 @@ function homepage() {
         scrollTrigger: {
             trigger: ".home",
             pin: true,
-            markers: true,
+            // markers: true,
             start: "top top",
             bottom: "bottom bottom",
             scrub: 2
@@ -41,28 +41,80 @@ function realpage() {
         scrollTrigger: {
             trigger: ".real",
             pin: true,
-            markers: true,
+            // markers: true,
             start: "top top",
             bottom: "bottom top",
-            scrub: 1    
+            scrub: 1
         },
-        xPercent : -200,
-        ease:Power4,
+        xPercent: -200,
+        ease: Power4,
     })
+}
+
+function pAnimatepage() {
+    var clutter = ""
+    document.querySelector(".textpara").textContent.split("").forEach(function (e) {
+        if (e === " ") clutter += `<span>${e}</span>`
+        clutter += `<span>${e}</span>`
+
+    })
+    document.querySelector(".textpara").innerHTML = clutter
+
+    gsap.set(".textpara span", { opacity: .1 })
+    gsap.to(".textpara span", {
+        scrollTrigger: {
+            trigger: ".para",
+            start: "top 0%",
+            end: "bottom 100%",
+            scrub: 2,
+            // markers:true,
+            color: "blue"
+        },
+        opacity: 1,
+        stagger: .03,
+        ease: Power4
+    })
+    var clutter1 = ""
+    document.querySelector(".textpara1").textContent.split("").forEach(function (elem) {
+        if (elem === " ") clutter += `<span>${elem}</span>`
+        clutter1 += `<span>${elem}</span>`
+
+    })
+
+    // console.log( document.querySelector(".textpara1").textContent.split(""));
+
+
+    document.querySelector(".textpara1").innerHTML = clutter1
+
+    gsap.set(".textpara1 span", { opacity: .1 })
+    gsap.to(".textpara1 span", {
+        scrollTrigger: {
+            trigger: ".para",
+            start: "top 0%",
+            end: "bottom 100%",
+            scrub: 2,
+            // markers:true,
+            color: "blue"
+        },
+        opacity: 1,
+        stagger: .03,
+        ease: Power4
+    })
+
+
+
+
+}
+function locomotive() {
+
+    (function () {
+        const locomotiveScroll = new LocomotiveScroll();
+    })();
+}
+function capsulesAnimate(){
+    
 }
 homepage()
 realpage()
-
-
-document.querySelectorAll(".listitem")
-
-    .forEach(function(el){
-        el.addEventListener("mousemove",function(dets){
-            gsap.to(this.querySelector(".picture",{
-                opacity : 1,
-
-            }))
-        })
-        el.addEventListener("mouseleave",function(dets){})
-    })
+pAnimatepage()
 
