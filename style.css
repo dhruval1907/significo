@@ -17,6 +17,9 @@
     clip-path: circle(var(--clip) at 50% 50%);
 }
 
+body{
+    transition: background-color ease-out .5s;
+}
 body[theme="black"]{
     background-color: black;
 }

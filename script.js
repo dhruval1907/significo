@@ -124,23 +124,26 @@ function capsulesAnimate() {
         ease: Power4
     })
 }
+function colorAnimate() {
 
-document.querySelectorAll(".section").forEach(function (e) {
-    ScrollTrigger.create({
-        trigger: e,
-        start: "top 50%",
-        end: "bottom 50%",
-        markers: true,
-        onEnter: function () {
-            document.body.setAttribute("theme", e.dataset.color)
-        },
-        onEnterBack: function () {
-            document.body.setAttribute("theme", e.dataset.color)
-        }
+    document.querySelectorAll(".section").forEach(function (e) {
+        ScrollTrigger.create({
+            trigger: e,
+            start: "top 50%",
+            end: "bottom 50%",
+            // markers: true,
+            onEnter: function () {
+                document.body.setAttribute("theme", e.dataset.color)
+            },
+            onEnterBack: function () {
+                document.body.setAttribute("theme", e.dataset.color)
+            }
+        })
     })
-})
+}
 capsulesAnimate()
 homepage()
 realpage()
 pAnimatepage()
+colorAnimate()
 
