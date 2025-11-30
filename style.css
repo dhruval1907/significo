@@ -1,51 +1,410 @@
-:root{
-    --salmon : #EF9D71;
-    --black : #000;
-    --white : #fff;
-    --purple : royalblue;
-    --dsalmon : rgb(178, 70, 70);
-    --cyan : #AEDEE0;
-}
-
-
-*::selection{
-    background-color: var(--salmon);
-}
-
-
-.vdodiv{
-    clip-path: circle(var(--clip) at 50% 50%);
-}
-
-body{
-    transition: background-color ease-out .5s;
-}
-body[theme="black"]{
-    background-color: black;
-}
-body[theme="black"] .section{
-    color: white;
-}
-body[theme="royalblue"]{
-    background-color: royalblue;
-}
-body[theme="royalblue"] .section{
-    color: rebeccapurple;
-}
-body[theme="salmon"]{
-    background-color: salmon;
-}
-body[theme="salmon"] .section{
-    color: rgb(250, 247, 247);
-}
-body[theme="white"]{
-    background-color: #ffffff;
-}
-body[theme="white"]{
-    color: rgb(0, 0, 0);
-}
-
 @font-face {
-    font-family: "fonts";  
-    src: url("./sources/fonts.ttf") ;
+  font-family: "fonts";
+  src: url("./sources/fonts.ttf");
 }
+
+:root {
+  --salmon: #EF9D71;
+  --black: #000;
+  --white: #fff;
+  --purple: royalblue;
+  --dsalmon: rgb(178, 70, 70);
+  --cyan: #AEDEE0;
+}
+
+
+*::selection {
+  background-color: var(--salmon);
+}
+
+
+.vdodiv {
+  clip-path: circle(var(--clip) at 50% 50%);
+}
+
+body {
+  transition: background-color ease-out .5s;
+}
+
+body[theme="black"] {
+  background-color: black;
+}
+
+body[theme="black"] .section {
+  color: white;
+}
+
+body[theme="royalblue"] {
+  background-color: royalblue;
+}
+
+body[theme="royalblue"] .section {
+  color: rebeccapurple;
+}
+
+body[theme="salmon"] {
+  background-color: salmon;
+}
+
+body[theme="salmon"] .section {
+  color: rgb(250, 247, 247);
+}
+
+body[theme="white"] {
+  background-color: #ffffff;
+}
+
+body[theme="white"] {
+  color: rgb(0, 0, 0);
+}
+
+/* style.css - Responsive Media Queries Only */
+
+/* Mobile Devices (up to 767px) */
+@media (max-width: 767px) {
+  .home {
+    height: 100vh !important;
+  }
+
+  .heading h1 {
+    width: 90% !important;
+    font-size: 1rem !important;
+  }
+
+  .elem h1 {
+    font-size: 2rem !important;
+  }
+
+  .imgdiv {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+
+  /* Craft Section Fix */
+  .craft {
+    flex-direction: column !important;
+    padding: 2rem 1rem !important;
+    gap: 2rem !important;
+  }
+
+  .ltext,
+  .rtext {
+    width: 100% !important;
+  }
+
+  .ltext {
+    position: static !important;
+  }
+
+  .ltext h1 {
+    font-size: 2.5rem !important;
+    line-height: 3rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .rtext {
+    height: 300px !important;
+  }
+
+  /* Real Section */
+  .real .cont {
+    height: 100vh !important;
+  }
+
+  .slides {
+    flex-direction: column !important;
+  }
+
+  .slide h1 {
+    font-size: 3rem !important;
+  }
+
+  .slide .image {
+    width: 12rem !important;
+    height: 12rem !important;
+  }
+
+  /* Team Section */
+  .team-section h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .list {
+    padding: 0 1rem !important;
+  }
+
+  .listitem {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    padding: 1.5rem 0 !important;
+  }
+
+  .listitem .left {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  .listitem h1,
+  .listitem h3 {
+    font-size: 1.25rem !important;
+  }
+
+  .picture {
+    width: 8rem !important;
+    height: 8rem !important;
+  }
+
+  /* Para Section */
+  .para {
+    padding: 2rem 0 !important;
+  }
+
+  .center {
+    flex-direction: column !important;
+    width: 95% !important;
+    gap: 3rem !important;
+  }
+
+  .text {
+    width: 100% !important;
+  }
+
+  .textpara,
+  .textpara1 {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+    width: 90% !important;
+  }
+
+  .textpara1 {
+    margin-top: 2rem !important;
+  }
+
+  .personal .img {
+    width: 5rem !important;
+    height: 5rem !important;
+  }
+
+  /* Capsules Section Fix */
+  .capsules {
+    flex-direction: column !important;
+    padding: 0 1rem !important;
+    height: auto !important;
+    margin-top: 3rem !important;
+  }
+
+  .capsules .left {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .capsules .left h1 {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+
+  .capsules .right {
+    flex-direction: column !important;
+    gap: 2rem !important;
+    width: 100% !important;
+  }
+
+  .capsule {
+    transform: none !important;
+    padding: 1.5rem !important;
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+
+  .capsule:nth-child(2) {
+    transform: none !important;
+  }
+
+  .capsule .teext h3 {
+    font-size: 1.25rem !important;
+  }
+}
+
+/* Tablet Devices (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .home {
+    height: 200vh !important;
+  }
+
+  .heading h1 {
+    width: 80% !important;
+    font-size: 1.25rem !important;
+  }
+
+  .elem h1 {
+    font-size: 3rem !important;
+  }
+
+  .imgdiv {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+
+  /* Craft Section */
+  .craft {
+    padding: 3rem 2rem !important;
+    flex-direction: row !important;
+  }
+
+  .ltext {
+    width: 50% !important;
+    position: sticky !important;
+    top: 2rem !important;
+  }
+
+  .rtext {
+    width: 50% !important;
+    height: 400px !important;
+  }
+
+  /* Real Section */
+  .real .cont {
+    height: 150vh !important;
+  }
+
+  .slides {
+    flex-direction: row !important;
+  }
+
+  .slide h1 {
+    font-size: 4rem !important;
+  }
+
+  .slide .image {
+    width: 15rem !important;
+    height: 15rem !important;
+  }
+
+  /* Team Section */
+  .team-section h1 {
+    font-size: 3.5rem !important;
+  }
+
+  .list {
+    padding: 0 2rem !important;
+  }
+
+  .listitem {
+    flex-direction: row !important;
+    padding: 2rem 0 !important;
+  }
+
+  .listitem .left {
+    flex-direction: row !important;
+  }
+
+  .listitem h1,
+  .listitem h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .picture {
+    width: 10rem !important;
+    height: 10rem !important;
+  }
+
+  /* Para Section */
+  .center {
+    width: 90% !important;
+    flex-direction: row !important;
+  }
+
+  .text {
+    width: 45% !important;
+  }
+
+  .textpara,
+  .textpara1 {
+    font-size: 1.25rem !important;
+  }
+
+  .personal .img {
+    width: 6rem !important;
+    height: 6rem !important;
+  }
+
+  /* Capsules Section */
+  .capsules {
+    padding: 0 2rem !important;
+    flex-direction: row !important;
+  }
+
+  .capsules .left {
+    width: 30% !important;
+  }
+
+  .capsules .right {
+    flex-direction: row !important;
+    gap: 1rem !important;
+    width: 70% !important;
+  }
+
+  .capsule {
+    transform: rotate(-16deg) !important;
+    width: auto !important;
+  }
+
+  .capsule:nth-child(2) {
+    transform: translateY(60px) rotate(-16deg) !important;
+  }
+}
+
+/* Laptop Devices (1024px to 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .home {
+    height: 200vh !important;
+  }
+
+  .heading h1 {
+    width: 65% !important;
+    font-size: 1.5rem !important;
+  }
+
+  .elem h1 {
+    font-size: 4.5rem !important;
+  }
+
+  .imgdiv {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  .craft {
+    padding: 4rem 3rem !important;
+  }
+
+  .ltext h1 {
+    font-size: 3.5rem !important;
+    line-height: 4rem !important;
+  }
+
+  .rtext {
+    height: 500px !important;
+  }
+
+  .slide h1 {
+    font-size: 6rem !important;
+  }
+
+  .slide .image {
+    width: 20rem !important;
+    height: 20rem !important;
+  }
+
+  .team-section h1 {
+    font-size: 4.5rem !important;
+  }
+
+  .capsules {
+    padding: 0 4rem !important;
+  }
+}
+
+/* Desktop (1280px and above) - Default styles apply */
